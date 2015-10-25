@@ -7,6 +7,10 @@ this is my work following along with a [@phil-opp][2]'s blog post series ["A min
 
 - `nasm`: assembler (assembly -> binary)
 - `ld`: linker (makes binary out of other files)
+- `grub`: creates the bootable iso
+- `xorriso`: req'd by grub, filesystem manipulator
+- `QEMU`: fake-computer emulator
+- `libsdl2-dev`: graphics library (not currently working on my chrooted chromebook)
 
 ### utilities
 you don't need these, but they are nice for viewing
@@ -44,6 +48,12 @@ generated code.
 
     ```sh
       $ objdump -h kernel.bin
+    ```
+
+5. tell QEMU to boot with our image
+
+    ```sh
+      $ qemu-system-x86_64 -hda os.iso
     ```
 
 [1]: http://blog.phil-opp.com/rust-os/multiboot-kernel.html

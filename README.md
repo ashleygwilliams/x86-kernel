@@ -50,6 +50,12 @@ generated code.
       $ objdump -h kernel.bin
     ```
 
+5. make a bootable iso
+
+    ```sh
+      $ grub-mkrescue -o os.iso isofiles
+    ```
+
 5. tell QEMU to boot with our image
 
     ```sh

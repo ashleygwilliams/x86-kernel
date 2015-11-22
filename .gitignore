@@ -3,3 +3,4 @@ boot
 *.o
 *.bin
 *.iso
+.vagrant

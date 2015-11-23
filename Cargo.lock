@@ -1,4 +1,12 @@
 [root]
 name = "my_os"
 version = "1.0.0"
+dependencies = [
+ "rlibc 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "rlibc"
+version = "0.1.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 

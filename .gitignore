@@ -4,3 +4,4 @@ boot
 *.bin
 *.iso
 .vagrant
+target

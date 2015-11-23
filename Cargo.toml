@@ -1,0 +1,7 @@
+[package]
+name = "my_os"
+version = "1.0.0"
+authors = ["ag_dubs"]
+
+[lib]
+crate-type = ["staticlib"]

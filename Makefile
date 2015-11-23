@@ -33,7 +33,7 @@ $(kernel): cargo $(rust_os) $(assembly_object_files) $(linker_script)
 	@ld -n --gc-sections -T $(linker_script) -o $(kernel) $(assembly_object_files) $(rust_os)
 
 cargo:
-	@cargo build --target $(target)
+	@cargo rustc --target $(target) -- -Z no-landing-pads
 
 build/arch/$(arch)/%.o: src/arch/$(arch)/%.asm
 	@mkdir -p $(shell dirname $@)

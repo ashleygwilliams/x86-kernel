@@ -1,4 +1,3 @@
-#![feature(no_std)]
 #![feature(lang_items)]
 #![no_std]
 

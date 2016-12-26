@@ -1,3 +1,4 @@
+test by kjin
 # x86 kernel
 > a simple x86 kernel, extended with Rust 
 

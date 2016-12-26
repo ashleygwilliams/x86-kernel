@@ -1,3 +1,4 @@
+kjin modify on my master
 # x86 kernel
 > a simple x86 kernel, extended with Rust 
 

@@ -77,3 +77,10 @@ Vagrant.configure(2) do |config|
 
   config.ssh.forward_x11 = true
 end
+
+
+Vagrant.configure("2") do |config|
+  # other config here
+
+  config.vm.synced_folder "./", "/vagrant"
+end

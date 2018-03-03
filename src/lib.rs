@@ -1,4 +1,3 @@
-#![feature(no_std)]
 #![feature(lang_items)]
 #![no_std]
 
@@ -19,6 +18,28 @@ pub extern fn rust_main() {
 
   loop{}
 }
+
+// This is required by because Rust creates some references to it even if we disable it.
+#[allow(non_snake_case)]
+#[no_mangle]
+pub extern "C" fn _Unwind_Resume() -> ! {
+        loop {}
+}
+
+// This is required by because Rust creates some references to it even if we disable it.
+#[allow(non_snake_case)]
+#[no_mangle]
+pub extern "C" fn rust_eh_personality() -> ! {
+        loop {}
+}
+
+// This is required by because Rust creates some references to it even if we disable it.
+#[allow(non_snake_case)]
+#[no_mangle]
+pub extern "C" fn rust_begin_unwind() -> ! {
+        loop {}
+}
+
 
 #[lang = "eh_personality"] extern fn eh_personality() {}
 #[lang = "panic_fmt"] extern fn panic_fmt() -> ! { loop{} }
